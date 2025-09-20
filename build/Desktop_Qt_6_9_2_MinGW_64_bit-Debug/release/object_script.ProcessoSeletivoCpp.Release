@@ -1,0 +1,12 @@
+release/unidademedida.o
+release/TelaLogin.o
+release/main.o
+release/produto.o
+release/usuario.o
+release/loginController.o
+release/databasemanager.o
+release/TelaCadastro.o
+release/qrc_qmake_qmake_qm_files.o
+release/moc_TelaLogin.o
+release/moc_databasemanager.o
+release/moc_TelaCadastro.o

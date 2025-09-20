@@ -1,0 +1,12 @@
+debug/unidademedida.o
+debug/TelaLogin.o
+debug/main.o
+debug/produto.o
+debug/usuario.o
+debug/loginController.o
+debug/databasemanager.o
+debug/TelaCadastro.o
+debug/qrc_qmake_qmake_qm_files.o
+debug/moc_TelaLogin.o
+debug/moc_databasemanager.o
+debug/moc_TelaCadastro.o
