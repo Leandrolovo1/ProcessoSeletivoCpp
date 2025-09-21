@@ -178,7 +178,7 @@
        </widget>
       </item>
       <item row="2" column="0" colspan="2">
-       <widget class="QLineEdit" name="lineEdit">
+       <widget class="QLineEdit" name="NameField">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
           <horstretch>0</horstretch>
@@ -195,12 +195,12 @@
          <bool>false</bool>
         </property>
         <property name="placeholderText">
-         <string>E-mail</string>
+         <string>Name</string>
         </property>
        </widget>
       </item>
       <item row="3" column="0" colspan="2">
-       <widget class="QLineEdit" name="lineEdit_2">
+       <widget class="QLineEdit" name="PasswordField">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Minimum" vsizetype="Maximum">
           <horstretch>0</horstretch>
@@ -220,20 +220,7 @@
          <enum>QLineEdit::EchoMode::Password</enum>
         </property>
         <property name="placeholderText">
-         <string>Senha</string>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="0" colspan="2">
-       <widget class="QPushButton" name="pushButton">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-          <horstretch>0</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-        <property name="text">
-         <string>LOGIN</string>
+         <string>Password</string>
         </property>
        </widget>
       </item>
@@ -249,6 +236,26 @@
          </size>
         </property>
        </spacer>
+      </item>
+      <item row="4" column="0">
+       <widget class="QPushButton" name="LoginButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="text">
+         <string>LOGIN</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QPushButton" name="SignInButton">
+        <property name="text">
+         <string>SIGN IN</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>

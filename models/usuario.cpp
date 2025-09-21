@@ -15,6 +15,11 @@ usuario::usuario(int id, QString nome, QString email, QString senha, bool admini
     this->senha = senha;
     this->administrador = administrador;
 }
+usuario::usuario(int id, QString nome, QString senha) {
+    this->id = id;
+    this->nome = nome;
+    this->senha = senha;
+}
 
 int usuario::getId() const {
     return this->id;

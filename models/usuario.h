@@ -13,6 +13,8 @@ private:
 public:
     usuario();
     usuario(int id, QString nome, QString email, QString senha, bool administrador);
+    usuario(int id, QString nome, QString email, QString senha);
+    usuario(int id, QString nome, QString senha);
 
     int getId() const;
     QString getNome() const;

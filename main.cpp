@@ -11,16 +11,17 @@ int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
     QSqlDatabase db = QSqlDatabase::addDatabase("QSQLITE");
-    QString caminhoBanco = "D:/Usuarios/LeandroLovo/Area de trabalho/CPP/BD/db_processo";
+    QString caminhoBanco = "D:/Usuarios/LeandroLovo/Area de trabalho/CPP/BD/db_processo.db";
     db.setDatabaseName(caminhoBanco);
-
+    qDebug() << "Conectado ao banco em:" << db.databaseName();
     if (!db.open()) {
-        qDebug() << "Erro ao conectar com o banco de dados!.";
-        qDebug() << "Motivo do erro:" << db.lastError().text();
-        return -1; // Encerra o programa se a conexão falhar
+        qDebug() << "Erro ao conectar com o banco de dados!";
+        qDebug() << "Motivo do erro: " << db.lastError().text();
+        return -1;
     } else {
-        qDebug() << "Sucesso! A conexao com o banco de dados foi feita.";
+        qDebug() << "!!!A conexao com o banco de dados foi feita!!!!";
     }
+
 
     QTranslator translator;
     const QStringList uiLanguages = QLocale::system().uiLanguages();
@@ -31,7 +32,7 @@ int main(int argc, char *argv[])
             break;
         }
     }
-    MainWindow w;
+    MainWindow w(db);
     w.show();
     return a.exec();
 }

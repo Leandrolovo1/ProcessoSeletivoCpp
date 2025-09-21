@@ -9,6 +9,7 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    repository/usuariorepository.cpp \
     models/unidademedida.cpp \
     view/TelaLogin.cpp \
     main.cpp \
@@ -16,8 +17,12 @@ SOURCES += \
     models/usuario.cpp \
     controller/loginController.cpp \
     database/databasemanager.cpp \
-    view/TelaCadastro.cpp
+    view/TelaCadastro.cpp \
+    view/telacadastroprodutos.cpp \
+
 HEADERS += \
+    repository/usuariorepository.h \
+    view/telacadastroprodutos.h \
     models/unidademedida.h \
     view/TelaLogin.h \
     models/produto.h \
@@ -27,7 +32,8 @@ HEADERS += \
     view/TelaCadastro.h
 FORMS += \
     forms/telaLogin.ui \
-    forms/TelaCadastro.ui
+    forms/TelaCadastro.ui \
+    forms/telacadastroprodutos.ui
 
 TRANSLATIONS += \
     ProcessoSeletivoCpp_pt_BR.ts

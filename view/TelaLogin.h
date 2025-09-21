@@ -1,23 +1,29 @@
 #ifndef TELALOGIN_H
 #define TELALOGIN_H
+#include "ui_telalogin.h"
+#include "controller/loginController.h"
 
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
-class MainWindow; // A classe gerada pelo uic é Ui::MainWindow
+    class MainWindow;
 }
 QT_END_NAMESPACE
 
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
+private slots:
+    void on_LoginButton_clicked();
+    void on_SignInButton_clicked();
 public:
-    MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QSqlDatabase &db, QWidget *parent = nullptr);
+
     ~MainWindow();
 
 private:
-    Ui::MainWindow *ui; // O ponteiro deve ser para Ui::MainWindow
+    Ui::MainWindow *ui;
+    loginController m_controller;
 };
 #endif // TELALOGIN_H
