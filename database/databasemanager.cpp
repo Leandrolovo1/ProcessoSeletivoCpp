@@ -7,6 +7,7 @@ databaseManager::databaseManager(QObject *parent)
     : QObject(parent)
 {
     m_db = QSqlDatabase::addDatabase("QSQLITE", "my_connection");
+    //troque o endereço do arquivo db_processo.db para ao do seu computador
     QString caminhoBanco = "D:/Usuarios/LeandroLovo/Area de trabalho/CPP/BD/db_processo.db";
     m_db.setDatabaseName(caminhoBanco);
     if (!m_db.open()) {
