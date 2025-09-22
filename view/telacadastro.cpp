@@ -1,11 +1,13 @@
-#include "telacadastro.h"
+#include "view/telacadastro.h"
 #include "ui_telacadastro.h"
 #include <QMessageBox>
 #include "TelaLogin.h"
 
-TelaCadastro::TelaCadastro(QWidget *parent)
+TelaCadastro::TelaCadastro(QSqlDatabase &db, QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::TelaCadastro)
+    , m_db(db)
+    ,m_controller(databaseManager::instance().getDatabase(), this)
 {
     ui->setupUi(this);
 }
@@ -22,13 +24,18 @@ void TelaCadastro::on_CreateButton_clicked()
     QString senha = ui->PasswordField->text();
     bool administrador = ui->PrivilegesCheckBox->isChecked();
 
-    if(nome.isEmpty() || senha.isEmpty() || email.isEmpty() || !administrador){
-        QMessageBox::information(this, "Atenção", "NOME, EMAIL ou SENHA NÃO podem estar vazios!");
+    bool sucesso = m_controller.criarUsuario(nome, email, senha, administrador);
+
+    if (sucesso) {
+        QMessageBox::information(this, "Sucesso", "Usuário criado com sucesso.");
     } else {
-        QMessageBox::information(this, "Sucesso", "Usuário criado.");
+        QMessageBox::information(this, "Atenção", "Houve um erro ao cadastrar o usuário. Verifique os dados.");
     }
 }
 
 void TelaCadastro::on_voltarButton_clicked()
 {
+    MainWindow *telaLogin = new MainWindow();
+    telaLogin->show();
+    this->close();
 }

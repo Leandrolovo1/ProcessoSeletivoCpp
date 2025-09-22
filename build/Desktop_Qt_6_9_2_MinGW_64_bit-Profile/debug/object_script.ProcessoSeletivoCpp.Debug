@@ -1,3 +1,5 @@
+debug/cadastrorepository.o
+debug/cadastrocontroller.o
 debug/usuariorepository.o
 debug/unidademedida.o
 debug/TelaLogin.o
@@ -9,6 +11,8 @@ debug/databasemanager.o
 debug/TelaCadastro.o
 debug/telacadastroprodutos.o
 debug/qrc_qmake_qmake_qm_files.o
+debug/moc_cadastrorepository.o
+debug/moc_cadastrocontroller.o
 debug/moc_usuariorepository.o
 debug/moc_telacadastroprodutos.o
 debug/moc_TelaLogin.o

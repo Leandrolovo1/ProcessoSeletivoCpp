@@ -7,6 +7,7 @@
 #include "models/usuario.h"
 #include <QString>
 #include <QMessageBox>
+#include "database/databasemanager.h"
 
 
 class loginController : public QObject{

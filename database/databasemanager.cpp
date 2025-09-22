@@ -7,6 +7,15 @@ databaseManager::databaseManager(QObject *parent)
     : QObject(parent)
 {
     m_db = QSqlDatabase::addDatabase("QSQLITE", "my_connection");
+    QString caminhoBanco = "D:/Usuarios/LeandroLovo/Area de trabalho/CPP/BD/db_processo.db";
+    m_db.setDatabaseName(caminhoBanco);
+    if (!m_db.open()) {
+        qDebug() << "Erro ao conectar com o banco de dados!";
+        qDebug() << "Motivo do erro: " << m_db.lastError().text();
+        emit connectionError(m_db.lastError().text());
+    } else {
+        qDebug() << "!!!A conexao com o banco de dados foi feita!!!!";
+    }
 }
 
 databaseManager::~databaseManager()
@@ -24,7 +33,17 @@ bool databaseManager::openDatabase(const QString& dbName)
     qDebug() << "Banco de dados aberto com sucesso!!!";
     return true;
 }
+databaseManager& databaseManager::instance()
+{
+    // A instância é criada apenas na primeira vez que esta função é chamada
+    static databaseManager instance;
+    return instance;
+}
 
+QSqlDatabase& databaseManager::getDatabase()
+{
+    return m_db;
+}
 void databaseManager::closeDatabase()
 {
     if (m_db.isOpen()) {

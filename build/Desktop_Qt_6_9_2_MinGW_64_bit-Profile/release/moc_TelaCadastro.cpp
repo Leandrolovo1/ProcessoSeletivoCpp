@@ -40,19 +40,16 @@ template <> constexpr inline auto TelaCadastro::qt_create_metaobjectdata<qt_meta
     namespace QMC = QtMocConstants;
     QtMocHelpers::StringRefStorage qt_stringData {
         "TelaCadastro",
-        "backToLoginRequested",
-        "",
         "on_CreateButton_clicked",
+        "",
         "on_voltarButton_clicked"
     };
 
     QtMocHelpers::UintData qt_methods {
-        // Signal 'backToLoginRequested'
-        QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
         // Slot 'on_CreateButton_clicked'
-        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'on_voltarButton_clicked'
-        QtMocHelpers::SlotData<void()>(4, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -76,16 +73,12 @@ void TelaCadastro::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
     auto *_t = static_cast<TelaCadastro *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->backToLoginRequested(); break;
-        case 1: _t->on_CreateButton_clicked(); break;
-        case 2: _t->on_voltarButton_clicked(); break;
+        case 0: _t->on_CreateButton_clicked(); break;
+        case 1: _t->on_voltarButton_clicked(); break;
         default: ;
         }
     }
-    if (_c == QMetaObject::IndexOfMethod) {
-        if (QtMocHelpers::indexOfMethod<void (TelaCadastro::*)()>(_a, &TelaCadastro::backToLoginRequested, 0))
-            return;
-    }
+    (void)_a;
 }
 
 const QMetaObject *TelaCadastro::metaObject() const
@@ -107,21 +100,15 @@ int TelaCadastro::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 3)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 3;
+        _id -= 2;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 3)
+        if (_id < 2)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 3;
+        _id -= 2;
     }
     return _id;
-}
-
-// SIGNAL 0
-void TelaCadastro::backToLoginRequested()
-{
-    QMetaObject::activate(this, &staticMetaObject, 0, nullptr);
 }
 QT_WARNING_POP

@@ -1,3 +1,5 @@
+release/cadastrorepository.o
+release/cadastrocontroller.o
 release/usuariorepository.o
 release/unidademedida.o
 release/TelaLogin.o
@@ -9,6 +11,8 @@ release/databasemanager.o
 release/TelaCadastro.o
 release/telacadastroprodutos.o
 release/qrc_qmake_qmake_qm_files.o
+release/moc_cadastrorepository.o
+release/moc_cadastrocontroller.o
 release/moc_usuariorepository.o
 release/moc_telacadastroprodutos.o
 release/moc_TelaLogin.o

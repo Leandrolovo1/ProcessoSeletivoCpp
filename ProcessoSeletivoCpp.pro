@@ -9,6 +9,9 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    Repository/cadastrorepository.cpp \
+    controller/cadastrocontroller.cpp \
+    repository/cadastroprodutosrepository.cpp \
     repository/usuariorepository.cpp \
     models/unidademedida.cpp \
     view/TelaLogin.cpp \
@@ -21,6 +24,9 @@ SOURCES += \
     view/telacadastroprodutos.cpp \
 
 HEADERS += \
+    Repository/cadastrorepository.h \
+    controller/cadastrocontroller.h \
+    repository/cadastroprodutosrepository.h \
     repository/usuariorepository.h \
     view/telacadastroprodutos.h \
     models/unidademedida.h \

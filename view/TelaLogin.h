@@ -2,7 +2,8 @@
 #define TELALOGIN_H
 #include "ui_telalogin.h"
 #include "controller/loginController.h"
-
+#include "telacadastroprodutos.h"
+#include "TelaCadastro.h"
 #include <QMainWindow>
 
 QT_BEGIN_NAMESPACE
@@ -18,7 +19,7 @@ private slots:
     void on_LoginButton_clicked();
     void on_SignInButton_clicked();
 public:
-    explicit MainWindow(QSqlDatabase &db, QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
 
     ~MainWindow();
 
