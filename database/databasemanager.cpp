@@ -35,7 +35,6 @@ bool databaseManager::openDatabase(const QString& dbName)
 }
 databaseManager& databaseManager::instance()
 {
-    // A instância é criada apenas na primeira vez que esta função é chamada
     static databaseManager instance;
     return instance;
 }

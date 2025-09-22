@@ -28,6 +28,9 @@ void TelaCadastro::on_CreateButton_clicked()
 
     if (sucesso) {
         QMessageBox::information(this, "Sucesso", "Usuário criado com sucesso.");
+        MainWindow *telaLogin = new MainWindow();
+        telaLogin->show();
+        this->close();
     } else {
         QMessageBox::information(this, "Atenção", "Houve um erro ao cadastrar o usuário. Verifique os dados.");
     }

@@ -11,7 +11,8 @@ CONFIG += c++17
 SOURCES += \
     Repository/cadastrorepository.cpp \
     controller/cadastrocontroller.cpp \
-    repository/cadastroprodutosrepository.cpp \
+    controller/produtoscontroller.cpp \
+    repository/produtosrepository.cpp \
     repository/usuariorepository.cpp \
     models/unidademedida.cpp \
     view/TelaLogin.cpp \
@@ -21,13 +22,16 @@ SOURCES += \
     controller/loginController.cpp \
     database/databasemanager.cpp \
     view/TelaCadastro.cpp \
+    view/createproduto.cpp \
     view/telacadastroprodutos.cpp \
 
 HEADERS += \
     Repository/cadastrorepository.h \
     controller/cadastrocontroller.h \
-    repository/cadastroprodutosrepository.h \
+    controller/produtoscontroller.h \
+    repository/produtosrepository.h \
     repository/usuariorepository.h \
+    view/createproduto.h \
     view/telacadastroprodutos.h \
     models/unidademedida.h \
     view/TelaLogin.h \
@@ -37,6 +41,7 @@ HEADERS += \
     database/databasemanager.h \
     view/TelaCadastro.h
 FORMS += \
+    forms/createproduto.ui \
     forms/telaLogin.ui \
     forms/TelaCadastro.ui \
     forms/telacadastroprodutos.ui

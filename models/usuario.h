@@ -1,5 +1,5 @@
-#ifndef PRODUTO_H
-#define PRODUTO_H
+#ifndef USUARIO_H
+#define USUARIO_H
 
 #include <QString>
 

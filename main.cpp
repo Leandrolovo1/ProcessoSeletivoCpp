@@ -21,10 +21,8 @@ int main(int argc, char *argv[])
             break;
         }
     }
-    // A conexão é criada implicitamente quando a instância é solicitada
     QSqlDatabase& db = databaseManager::instance().getDatabase();
 
-    // Se a conexão não estiver aberta, a aplicação pode emitir um erro e sair
     if (!db.isOpen()) {
         return -1;
     }
